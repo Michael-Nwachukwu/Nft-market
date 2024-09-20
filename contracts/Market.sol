@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract NFTMarketplace is ERC721URIStorage, Ownable {
+contract Openmarket is ERC721URIStorage, Ownable {
 
     error PriceMustBeGreaterThanZero();
     error NotOwnerOfNFT();
@@ -36,7 +36,7 @@ contract NFTMarketplace is ERC721URIStorage, Ownable {
     event NFTSold(uint256 indexed tokenId, uint256 price, address indexed seller, address indexed buyer);
     event ListingCancelled(uint256 indexed tokenId, address indexed seller);
 
-    constructor() ERC721("NFTMarketplace", "NFTM") Ownable(msg.sender) {}
+    constructor() ERC721("OpenMarket", "OPM") Ownable(msg.sender) {}
     
     /*
      * @notice Mints a new NFT
